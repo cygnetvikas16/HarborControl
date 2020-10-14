@@ -1,0 +1,102 @@
+<div class="" id="page-wrapper">
+  <div class="container-fluid">
+
+    <div class="row" style="margin-top:20px ">
+      <div class="col-md-12 col-lg-12">
+
+        <div class="panel panel-default panel-table">
+          <div class="panel-heading panel-heading-no-divider">Boat's at the perimeter</div>
+          <div class="table-responsive">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th style="width: 32px"></th>
+                  <th># of Speedboat</th>
+                  <th># of Sailboat</th>
+                  <th># of Cargo ship</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td></td>
+                  <td>{{cBoats.speedboatPerimeter}}</td>
+                  <td>{{cBoats.sailboatPerimeter}}</td>
+                  <td>{{cBoats.cargoShipPerimeter}}</td>
+                </tr>
+
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-12 col-lg-12">
+
+        <div class="panel panel-default panel-table">
+          <div class="panel-heading panel-heading-no-divider">Boat's in progress(in the perimeter)</div>
+          <div *ngIf="isBoatInProgress" class="table-responsive">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th style="width: 32px"></th>
+                  <th>Boat Name</th>
+                  <th>Type</th>
+                  <th>Start time</th>
+                  <th>Reach at Dock</th>
+                  <th>Estimated time of arrival</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td></td>
+                  <td>{{inpBoat.boatName}}</td>
+                  <td>{{inpBoat.boatType}}</td>
+                  <td>{{inpBoat.startdatetime}}</td>
+                  <td>{{inpBoat.enddatetime}}</td>
+                  <td>{{timeOfArr}}</td>
+                </tr>
+
+              </tbody>
+            </table>
+          </div>
+          <div style="margin-left: 22px; font-size: 20px; font-weight: 400;" *ngIf="!isBoatInProgress">No Boat's in the
+            perimeter</div>
+        </div>
+      </div>
+      <div class="col-md-12 col-lg-12">
+
+        <div class="panel panel-default panel-table">
+          <div class="panel-heading panel-heading-no-divider">Boat's at the dock
+            <span style="font-size: 15px;">( Wind Speed at Durban - {{wp.windKmH}} km/h. )</span>
+
+          </div>
+          <div class="table-responsive">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th style="width: 32px"></th>
+                  <th># of Speedboat</th>
+                  <th># of Sailboat</th>
+                  <th># of Cargo ship</th>
+
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                  </td>
+                  <td>{{cBoats.speedboatDock}}</td>
+                  <td>{{cBoats.sailboatDock}}</td>
+                  <td>{{cBoats.cargoShipDock}}</td>
+                </tr>
+
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</div>

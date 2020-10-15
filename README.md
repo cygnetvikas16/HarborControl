@@ -28,7 +28,7 @@
 ```sh
 Frontend     : Angular V9.1
 Backend API  : ASP.NET core 3.1 (Including Swagger)
-WebSchedular : Hangfire (Generate boats on every 3 min)
+WebSchedular : Hangfire
 Wether api   : api.openweathermap.org
 ```
 # Database
